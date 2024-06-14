@@ -30,7 +30,7 @@ public class OfertaViagem: Valida
 
     protected override void Validar()
     {
-        if (!Periodo.EhValido)
+        if (!Periodo.isValid)
         {
             Erros.RegistrarErro(Periodo.Erros.Sumario);
         } else if (Rota == null || Periodo == null)

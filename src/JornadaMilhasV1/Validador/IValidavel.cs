@@ -40,6 +40,6 @@ public record Erro(string Mensagem);
 internal interface IValidavel
 {
     // bool Validar();
-    bool EhValido { get; }
+    bool isValid { get; }
     Erros Erros { get; }
 }
