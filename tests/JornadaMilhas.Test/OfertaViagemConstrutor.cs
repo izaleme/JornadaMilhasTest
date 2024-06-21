@@ -4,19 +4,22 @@ namespace JornadaMilhas.Test
 {
     public class OfertaViagemConstrutor
     {
-        [Fact]
-        public void RetornaOfertaValidaQuandoDadosValidos()
+        [Theory]
+        [InlineData("", null, "2024-01-01", "2024-01-02", 0, false)] // Oferta Inválida
+        [InlineData("OrigemTeste", "DestinoTeste", "2024-02-01", "2024-02-05", 100, true)] // Oferta Válida
+        [InlineData(null, "São Paulo", "2824-01-01", "2024-01-01", 0, false)]
+        [InlineData("Vitória", "São Paulo", "2024-01-01", "2024-01-01", 0, false)]
+        [InlineData("Rio de Janeiro", "São Paulo", "2024-01-01", "2024-01-02", -500, false)]
+        public void RetornaIsValidDeAcordoComDadosDeEntrada(string origem, string destino, string dataIda, string dataVolta, double preco, bool validacao)
         {
-            // Scenario --> Arrange
-            Rota rota = new Rota("OrigemTeste", "DestinoTeste");
-            Periodo periodo = new Periodo(new DateTime(2024, 2, 1), new DateTime(2024, 2, 5));
-            double preco = 100.0;
-            var validacao = true;
+            // Arrange (Cenário)
+            Rota rota = new Rota(origem, destino);
+            Periodo periodo = new Periodo(DateTime.Parse(dataIda), DateTime.Parse(dataVolta));
 
-            // Action --> Act
+            // Act (Ação)
             OfertaViagem oferta = new OfertaViagem(rota, periodo, preco);
 
-            // Validation --> Assert
+            // Assert (Validação)
             Assert.Equal(validacao, oferta.isValid);
         }
 
@@ -68,13 +71,14 @@ namespace JornadaMilhas.Test
             Assert.False(oferta.isValid);
         }
 
-        [Fact]
-        public void RetornaMsgDeErroPrecoInvalidoQuandoPrecoNegativo()
+        [Theory]
+        [InlineData(0)]
+        [InlineData(-250)]
+        public void RetornaMsgDeErroPrecoInvalidoDeAcordoComPrecoInformado(double preco)
         {
             // Arrange
             Rota rota = new Rota("Origen1", "Destino1");
             Periodo periodo = new Periodo(new DateTime(2024, 8, 20), new DateTime(2024, 8, 30));
-            double preco = -250;
 
             // Act
             OfertaViagem oferta = new OfertaViagem(rota, periodo, preco);
@@ -82,6 +86,5 @@ namespace JornadaMilhas.Test
             // Assert
             Assert.Contains("O preço da oferta de viagem deve ser maior que zero.", oferta.Erros.Sumario);
         }
-
     }
 }
