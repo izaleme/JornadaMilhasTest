@@ -2,10 +2,10 @@ using JornadaMilhasV1.Modelos;
 
 namespace JornadaMilhas.Test
 {
-    public class OfertaViagemTest
+    public class OfertaViagemConstrutor
     {
         [Fact]
-        public void TestandoOfertaValida()
+        public void RetornaOfertaValidaQuandoDadosValidos()
         {
             // Scenario --> Arrange
             Rota rota = new Rota("OrigemTeste", "DestinoTeste");
@@ -21,7 +21,7 @@ namespace JornadaMilhas.Test
         }
 
         [Fact]
-        public void TestandoOfertaComRotaNula()
+        public void RetornaMsgErroRotaOuPeriodoInvalidosQuandoRotaNula()
         {
             // Arrange
             Rota rota = null;
@@ -37,7 +37,7 @@ namespace JornadaMilhas.Test
         }
 
         [Fact]
-        public void TestandoPeriodoNull()
+        public void RetornaMsgErroPeriodoInvalidoQuandoPeriodoNull()
         {
             // Arrange
             Rota rota = new Rota("OrigemTeste", "DestinoTeste");
@@ -53,7 +53,7 @@ namespace JornadaMilhas.Test
         }
 
         [Fact]
-        public void TestandoOfertaComPeriodoInvalido()
+        public void RetornaMsgErroPeriodoInvalidoQuandoPeriodoInvalido()
         {
             // Arrange
             Rota rota = new Rota("OrigemTeste", "DestinoTeste");
@@ -69,7 +69,7 @@ namespace JornadaMilhas.Test
         }
 
         [Fact]
-        public void TestandoPrecoNegativo()
+        public void RetornaMsgDeErroPrecoInvalidoQuandoPrecoNegativo()
         {
             // Arrange
             Rota rota = new Rota("Origen1", "Destino1");
