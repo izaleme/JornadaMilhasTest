@@ -19,6 +19,12 @@
 - [x] Solving mutation testing problems with Theory
 
 ##
+### Installations
+<p>It is necessary to install the Stryker .NET library to perform mutation testing.</p>
+<li>Right-click on the JornadaMilhas.Test project --> Open in terminal --> paste the command <i>dotnet tool install -g dotnet-stryker</i></li>
+<li>To run Stryker inside the project --> <i>dotnet stryker</i></li> <br>
+
+##
 ### Observations:
 
 #### Test standardization
