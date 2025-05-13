@@ -16,6 +16,7 @@
 - [x] Apply the AAA standard to write tests with more clarity and organization
 - [x] Restructure the test nomenclature following a conventional naming standard
 - [x] Test different sets of data in the same test, using Theory
+- [x] Solving mutation testing problems with Theory
 
 ##
 ### Observations:
@@ -43,4 +44,11 @@
 <li>[Test] - used to identify different tests within the same test class</li>
 <li>[Ignore] - used to ignore a specific test during execution</li>
 <li>[Collection] - used to group tests into specific collections</li>
-</ul>
+</ul><br>
+
+### Mutation Testing
+<p>Mutation testing is an advanced software testing technique designed to evaluate the effectiveness of unit tests by identifying gaps in code coverage. It is particularly useful for detecting semantic changes in the code that could introduce bugs. The process follows these steps:</p>
+<li><b>Apply mutations:</b> Automated modifications simulate small errors in the code.</li>
+<li><b>Run tests:</b> Checks whether the tests detect the changes (kills the mutants).</li>
+<li><b>Assess coverage:</b> A high number of undetected mutants indicates insufficient test coverage.</li>
+<li><b>Improve tests:</b> Tests are refined or added to enhance their effectiveness.</li>
