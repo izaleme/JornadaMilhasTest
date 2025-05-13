@@ -16,6 +16,7 @@
 - [x] Aplicar o padrão AAA para escrever testes com mais clareza e organização
 - [x] Reestruturar os testes seguindo um padrão convencional de nomenclatura
 - [x] Testar conjuntos de dados diferentes num mesmo teste, utilizando o Theory
+- [x] Correção de problemas com testes de mutação e utilizando o Theory
 
 ##
 ### Observações:
@@ -44,4 +45,11 @@
 <li>[Test] - utilizada para identificar testes distintos dentro de uma mesma classe de teste</li>
 <li>[Ignore] - utilizada para ignorar um teste específico durante a execução</li>
 <li>[Collection] - utilizada para agrupar testes em coleções específicas</li>
-</ul>
+</ul><br>
+
+### Testes de Mutação
+<p>Testes de mutação são uma técnica avançada de testes de software que visam avaliar a eficácia dos testes de unidade identificando lacunas na cobertura do código. São muito úteis para detectar mudanças semânticas significativas no código que possam introduzir bugs. Em etapas:</p>
+<li><b>Aplicar mutações:</b> Modificações automáticas simulam pequenos erros no código.</li>
+<li><b>Rodar os testes:</b> Verifica se os testes identificam as mudanças (mutantes "mortos").</li>
+<li><b>Avaliar cobertura:</b> Muitos mutantes não detectados indicam testes insuficientes.</li>
+<li><b>Melhorar os testes:</b> Ajusta-se ou adicionam-se testes para aumentar a eficácia.</li>
