@@ -19,6 +19,13 @@
 - [x] Correção de problemas com testes de mutação e utilizando o Theory
 
 ##
+### Instalações
+<p>Necessário instalar a biblioteca Stryker dotnet para realizar os testes de mutação.</p>
+<li>Botão direito no projeto JornadaMilhas.Test --> Abrir no terminal --> colar o comando <i>dotnet tool install -g dotnet-stryker</i></li>
+<li>Para roda o stryker dentro do projeto --> <i>dotnet Stryker</i></li>
+<br>
+
+##
 ### Observações:
 
 #### Padronização de testes
