@@ -1,9 +1,5 @@
 # Jornada Milhas Test
 
-<h4 align="center"> 
-    :construction:  Projeto em construção  :construction:
-</h4>
-
 ### Testes Automatizados com .NET
 <p>Este repositório apresenta um projeto de <b>testes automatizados</b> utilizando a plataforma .NET. Para a implementação dos testes, foi selecionada a biblioteca xUnit, uma das mais robustas e populares para o ecossistema .NET.</p>
 <p>O foco deste projeto é a aplicação "Jornada Milhas", uma plataforma de ofertas de viagens.</p>
