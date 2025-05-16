@@ -1,9 +1,5 @@
 # Jornada Milhas Test
 
-<h4 align="center"> 
-    :construction:  Project under construction  :construction:
-</h4>
-
 ### Automated Tests with .NET
 <p>This repository presents an <b>automated testing project</b> using the .NET platform. To implement the tests, the xUnit library was selected, one of the most robust and popular for the .NET ecosystem.</p>
 <p>The focus of this project is the "Jornada Milhas" application, a travel offers platform.</p>
