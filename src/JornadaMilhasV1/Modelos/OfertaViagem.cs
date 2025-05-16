@@ -17,6 +17,7 @@ public class OfertaViagem : Valida
     public double Preco { get; set; }
 
     public const double Desconto_Maximo = 0.7;
+
     public double Desconto
     {
         get => desconto;
@@ -33,6 +34,8 @@ public class OfertaViagem : Valida
             }
         }
     }
+
+    public bool Ativa { get; set; } = true;
 
     public OfertaViagem(Rota rota, Periodo periodo, double preco)
     {
